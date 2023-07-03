@@ -11,6 +11,7 @@ func _ready() -> void:
 	astar_grid.set_default_compute_heuristic(AStarGrid2D.HEURISTIC_MANHATTAN);
 	astar_grid.set_default_estimate_heuristic(AStarGrid2D.HEURISTIC_MANHATTAN);
 	astar_grid.size = game_map.get_used_rect().size;
+	var test = game_map.get_used_rect().position; # should be 0/0 (it is)
 	astar_grid.cell_size = game_map.tile_set.tile_size;
 	astar_grid.update();
 	for cell in used_cells:
