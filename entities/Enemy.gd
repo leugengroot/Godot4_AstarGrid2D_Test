@@ -25,7 +25,7 @@ func _ready() -> void:
 
 func _on_player_moved():
 	var player_pos = get_parent().get_node("Player").position;
-	astar_grid.update();
+	
 	var from_point = Vector2(position.x / 32, position.y / 32);
 	var to_point = Vector2(player_pos.x / 32, player_pos.y / 32);
 	path.clear();
